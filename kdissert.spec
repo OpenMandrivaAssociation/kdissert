@@ -9,6 +9,7 @@ Group:		        Office
 License:		GPL
 URL:			http://freehackers.org/~tnagy/kdissert/index.html
 Source0:		http://freehackers.org/~tnagy/kdissert/%name-%version.tar.bz2
+BuildRoot:	        %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:		kdelibs-devel
 BuildRequires:          libxml2-utils 
 BuildRequires:          desktop-file-utils
