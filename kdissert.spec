@@ -9,6 +9,7 @@ Group:		        Office
 License:		GPL
 URL:			http://freehackers.org/~tnagy/kdissert/index.html
 Source0:		http://freehackers.org/~tnagy/kdissert/%name-%version.tar.bz2
+Patch0:                 kdissert-1.0.7-fix-desktop-files.patch 
 BuildRoot:	        %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:		kdelibs-devel
 BuildRequires:          libxml2-utils 
@@ -110,6 +111,7 @@ and businessmen.
 
 %prep
 %setup -q -n %name-%version
+%patch0 -p1
 
 %build
 %define __libtoolize /bin/true
@@ -133,15 +135,6 @@ install -d $RPM_BUILD_ROOT/%{_miconsdir}
 install -m644 src/appdata/hi22-app-kdissert.png $RPM_BUILD_ROOT/%{_miconsdir}/%{name}.png
 install -m644 src/appdata/hi32-app-kdissert.png $RPM_BUILD_ROOT/%{_iconsdir}/%{name}.png
 install -m644 src/appdata/hi64-app-kdissert.png $RPM_BUILD_ROOT/%{_liconsdir}/%{name}.png
-
-# Menu Entry
-desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --remove-category="QT" \
-  --add-category="Qt" \
-  --add-category="Presentation" \
-  --add-category="Office" \
-  --dir $RPM_BUILD_ROOT%_datadir/applnk/Utilities $RPM_BUILD_ROOT%_datadir/applnk/Utilities/*
 
 %find_lang %{name}
 
