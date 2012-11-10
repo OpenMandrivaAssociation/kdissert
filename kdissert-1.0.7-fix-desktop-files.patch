@@ -1,0 +1,17 @@
+--- kdissert-1.0.7/src/appdata/kdissert.desktop~	2006-11-08 20:11:34.000000000 +0100
++++ kdissert-1.0.7/src/appdata/kdissert.desktop	2008-03-20 07:56:57.000000000 +0100
+@@ -1,11 +1,10 @@
+-[KDE Desktop Entry]
+-Encoding=UTF-8
++[Desktop Entry]
+ Type=Application
+ Exec=kdissert -caption "%c" %i %m
+ Icon=kdissert
+ DocPath=kdissert/index.html
+-MimeType=application/x-kdissert
+-Categories=QT;KDE;Utility;X-KDE-More;
++MimeType=application/x-kdissert;
++Categories=KDE;Utility;X-KDE-More;Qt;Presentation;Office;
+ Name=kdissert
+ Name[da]=Kdissert
+ Name[sv]=Kdissert
