@@ -7,7 +7,7 @@ Version:		%{version}
 Release:		%{release}
 Group:		        Office
 License:		GPL
-URL:			http://freehackers.org/~tnagy/kdissert/index.html
+URL:			https://freehackers.org/~tnagy/kdissert/index.html
 Source0:		http://freehackers.org/~tnagy/kdissert/%name-%version.tar.bz2
 Patch0:                 kdissert-1.0.7-fix-desktop-files.patch 
 BuildRoot:	        %{_tmppath}/%{name}-%{version}-%{release}-root
